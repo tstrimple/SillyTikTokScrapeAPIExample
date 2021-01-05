@@ -40,4 +40,3 @@ function getTkTokStats(username, callback) {
         callback(response.statusCode, results);
     });
 }
-gi

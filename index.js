@@ -4,7 +4,7 @@ const restify = require('restify');
 
 var server = restify.createServer();
 server.get('/:username', function(req, res, next) {
-    getTkTokStats(req.params.username, function(status, stats) {
+    getTikTokStats(req.params.username, function(status, stats) {
         res.send(stats);
     });
 });
@@ -14,7 +14,7 @@ server.listen(port, function() {
   console.log('%s listening at %s', server.name, server.url);
 });
 
-function getTkTokStats(username, callback) {
+function getTikTokStats(username, callback) {
     request({
         url: `https://tiktok.com/${username}`,
         followAllRedirects: true,
